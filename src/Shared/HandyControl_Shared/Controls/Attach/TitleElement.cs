@@ -75,5 +75,14 @@ namespace HandyControl.Controls
 
         public static VerticalAlignment GetVerticalAlignment(DependencyObject element)
             => (VerticalAlignment) element.GetValue(VerticalAlignmentProperty);
+
+        public static readonly DependencyProperty MarginProperty = DependencyProperty.RegisterAttached(
+            "Margin", typeof(Thickness), typeof(TitleElement), new FrameworkPropertyMetadata(default(Thickness), FrameworkPropertyMetadataOptions.Inherits));
+
+        public static void SetMargin(DependencyObject element, Thickness value)
+            => element.SetValue(MarginProperty, value);
+
+        public static Thickness GetMargin(DependencyObject element)
+            => (Thickness) element.GetValue(MarginProperty);
     }
 }

@@ -264,7 +264,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition Width="30"/>
             </Grid.ColumnDefinitions>
-            <StackPanel VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Margin="0,7,6,7" Visibility="{Binding Path=(hc:InfoElement.Title),RelativeSource={RelativeSource TemplatedParent},Converter={StaticResource String2VisibilityConverter}}" Orientation="Horizontal">
+            <StackPanel VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Margin="{Binding Path=(hc:TitleElement.Margin),RelativeSource={RelativeSource TemplatedParent}}" Visibility="{Binding Path=(hc:InfoElement.Title),RelativeSource={RelativeSource TemplatedParent},Converter={StaticResource String2VisibilityConverter}}" Orientation="Horizontal">
                 <TextBlock Text="{Binding Path=(hc:InfoElement.Title),RelativeSource={RelativeSource TemplatedParent}}"/>
                 <ContentPresenter TextElement.Foreground="{DynamicResource DangerBrush}" Margin="4,0,0,0" Content="{Binding Path=(hc:InfoElement.Symbol),RelativeSource={RelativeSource TemplatedParent}}" Visibility="{Binding Path=(hc:InfoElement.Necessary),RelativeSource={RelativeSource TemplatedParent},Converter={StaticResource Boolean2VisibilityConverter}}"/>
             </StackPanel>
@@ -472,7 +472,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition Width="Auto" MinWidth="30"/>
             </Grid.ColumnDefinitions>
-            <StackPanel VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Margin="0,7,6,7" Visibility="{Binding Path=(hc:InfoElement.Title),RelativeSource={RelativeSource TemplatedParent},Converter={StaticResource String2VisibilityConverter}}" Orientation="Horizontal">
+            <StackPanel VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Margin="{Binding Path=(hc:TitleElement.Margin),RelativeSource={RelativeSource TemplatedParent}}" Visibility="{Binding Path=(hc:InfoElement.Title),RelativeSource={RelativeSource TemplatedParent},Converter={StaticResource String2VisibilityConverter}}" Orientation="Horizontal">
                 <TextBlock Text="{Binding Path=(hc:InfoElement.Title),RelativeSource={RelativeSource TemplatedParent}}"/>
                 <ContentPresenter TextElement.Foreground="{DynamicResource DangerBrush}" Margin="4,0,0,0" Content="{Binding Path=(hc:InfoElement.Symbol),RelativeSource={RelativeSource TemplatedParent}}" Visibility="{Binding Path=(hc:InfoElement.Necessary),RelativeSource={RelativeSource TemplatedParent},Converter={StaticResource Boolean2VisibilityConverter}}"/>
             </StackPanel>

@@ -17,10 +17,10 @@ namespace HandyControl.Tools.Converter
                     if (arr.Length != 4) return thickness;
 
                     return new Thickness(
-                        arr[0].Equals("1") ? thickness.Left : 0,
-                        arr[1].Equals("1") ? thickness.Top : 0,
-                        arr[2].Equals("1") ? thickness.Right : 0,
-                        arr[3].Equals("1") ? thickness.Bottom : 0);
+                        arr[0].Equals("-") ? thickness.Left : double.Parse(arr[0]),
+                        arr[1].Equals("-") ? thickness.Top : double.Parse(arr[1]),
+                        arr[2].Equals("-") ? thickness.Right : double.Parse(arr[2]),
+                        arr[3].Equals("-") ? thickness.Bottom : double.Parse(arr[3]));
                 }
             }
             return value;

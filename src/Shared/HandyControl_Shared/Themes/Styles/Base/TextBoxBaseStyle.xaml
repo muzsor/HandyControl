@@ -32,6 +32,7 @@
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="CaretBrush" Value="{DynamicResource PrimaryTextBrush}"/>
         <Setter Property="hc:BorderElement.CornerRadius" Value="{StaticResource DefaultCornerRadius}"/>
+        <Setter Property="hc:TitleElement.Margin" Value="0,7,6,7"/>
         <Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
         <Setter Property="HorizontalContentAlignment" Value="Left"/>
         <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
@@ -98,7 +99,7 @@
                 <ColumnDefinition Width="{Binding Path=(hc:InfoElement.TitleWidth),RelativeSource={RelativeSource TemplatedParent}}"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <DockPanel LastChildFill="True" Visibility="{Binding Path=(hc:InfoElement.Title),RelativeSource={RelativeSource TemplatedParent},Converter={StaticResource String2VisibilityConverter}}" HorizontalAlignment="{Binding Path=(hc:TitleElement.HorizontalAlignment),RelativeSource={RelativeSource TemplatedParent}}" VerticalAlignment="{Binding Path=(hc:TitleElement.VerticalAlignment),RelativeSource={RelativeSource TemplatedParent}}" Margin="0,7,6,7">
+            <DockPanel LastChildFill="True" Visibility="{Binding Path=(hc:InfoElement.Title),RelativeSource={RelativeSource TemplatedParent},Converter={StaticResource String2VisibilityConverter}}" HorizontalAlignment="{Binding Path=(hc:TitleElement.HorizontalAlignment),RelativeSource={RelativeSource TemplatedParent}}" VerticalAlignment="{Binding Path=(hc:TitleElement.VerticalAlignment),RelativeSource={RelativeSource TemplatedParent}}" Margin="{Binding Path=(hc:TitleElement.Margin),RelativeSource={RelativeSource TemplatedParent}}">
                 <ContentPresenter DockPanel.Dock="Right" TextElement.Foreground="{DynamicResource DangerBrush}" Margin="4,0,0,0" Content="{Binding Path=(hc:InfoElement.Symbol),RelativeSource={RelativeSource TemplatedParent}}" Visibility="{Binding Path=(hc:InfoElement.Necessary),RelativeSource={RelativeSource TemplatedParent},Converter={StaticResource Boolean2VisibilityConverter}}"/>
                 <TextBlock hc:TextBlockAttach.AutoTooltip="True" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" Text="{Binding Path=(hc:InfoElement.Title),RelativeSource={RelativeSource TemplatedParent}}"/>
             </DockPanel>
@@ -210,7 +211,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <TextBlock FontSize="12" Text="{TemplateBinding ErrorStr}" Name="TextBlockError" VerticalAlignment="Bottom" Margin="9,0,0,4" Foreground="{DynamicResource DangerBrush}" Grid.Column="1"/>
-            <DockPanel LastChildFill="True"  Grid.Column="0" Visibility="{Binding Path=(hc:InfoElement.Title),RelativeSource={RelativeSource TemplatedParent},Converter={StaticResource String2VisibilityConverter}}" HorizontalAlignment="{Binding Path=(hc:TitleElement.HorizontalAlignment),RelativeSource={RelativeSource TemplatedParent}}" VerticalAlignment="{Binding Path=(hc:TitleElement.VerticalAlignment),RelativeSource={RelativeSource TemplatedParent}}" Margin="0,7,6,7">
+            <DockPanel LastChildFill="True"  Grid.Column="0" Visibility="{Binding Path=(hc:InfoElement.Title),RelativeSource={RelativeSource TemplatedParent},Converter={StaticResource String2VisibilityConverter}}" HorizontalAlignment="{Binding Path=(hc:TitleElement.HorizontalAlignment),RelativeSource={RelativeSource TemplatedParent}}" VerticalAlignment="{Binding Path=(hc:TitleElement.VerticalAlignment),RelativeSource={RelativeSource TemplatedParent}}" Margin="{Binding Path=(hc:TitleElement.Margin),RelativeSource={RelativeSource TemplatedParent}}">
                 <ContentPresenter DockPanel.Dock="Right" TextElement.Foreground="{DynamicResource DangerBrush}" Margin="4,0,0,0" Content="{Binding Path=(hc:InfoElement.Symbol),RelativeSource={RelativeSource TemplatedParent}}" Visibility="{Binding Path=(hc:InfoElement.Necessary),RelativeSource={RelativeSource TemplatedParent},Converter={StaticResource Boolean2VisibilityConverter}}"/>
                 <TextBlock hc:TextBlockAttach.AutoTooltip="True" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" Text="{Binding Path=(hc:InfoElement.Title),RelativeSource={RelativeSource TemplatedParent}}"/>
             </DockPanel>
